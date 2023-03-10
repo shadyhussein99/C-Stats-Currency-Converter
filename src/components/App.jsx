@@ -2,7 +2,7 @@
 // section of the home page
 
 import React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Navbar from "./Navbar"
 import Title from "./Title"
 import Form from "./Form"
@@ -22,15 +22,6 @@ function App() {
   var [validNo, setValidNo] = useState(false)     // Describes if the user entered a valid amount (number) or not
   var [shown, setShown] = useState(false)     // Responsible for showing the results only if the user entered a valid amount (number)
 
-      useEffect(function () {
-    fetch(`https://api.currencybeacon.com/v1/convert?api_key=280d6550ce1839946307c723fbec08a2&from=${savedFrom}&to=${savedTo}&amount=${savedAmount}`)
-      .then(res => res.json())
-      .then(res => {
-       const { response } = res
-       setResult(response)
-      })
-     .catch(err => console.log(err))
-  }, [savedAmount, savedFrom, savedTo])    
 
   return (<div>
     <Navbar />
@@ -41,6 +32,9 @@ function App() {
       setSavedTo={setSavedTo}
       setShown={setShown}
       savedAmount={savedAmount}
+      savedFrom={savedFrom}
+      savedTo={savedTo}
+      setResult={setResult}
       validNo={validNo}
       setValidNo={setValidNo}
     />

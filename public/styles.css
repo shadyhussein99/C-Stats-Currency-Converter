@@ -123,6 +123,12 @@ input {
     margin-top: 6%;
 }
 
+/* CurrencyInput */
+
+.input-group {
+    margin-top: 6%;
+}
+
 /* form */
 
 .fa-arrow-right {
@@ -239,28 +245,31 @@ input {
 
 .downloadApp-img {
     border-radius: 10%;
+    height: 100%;
+    width: 70%;
+    object-fit: fill;
     padding-top: 3%;
     padding-bottom: 3%;
 }
 
 .downloadApp-h3 {
     color: #0081C9;
-
     padding-bottom: 3%;
 }
 
 .downloadApp-p {
     color: #413F42;
-
     padding-bottom: 3%;
     width: 90%;
 }
 
 .downloadApp-second-col {
+    text-align: left;
     padding-top: 8%;
 }
 
 .downloadApp-button {
+    margin-bottom: 5%;
     margin-left: 2%;
 }
 
@@ -511,8 +520,17 @@ footer {
 
     /* Download App */
 
+    .downloadApp-second-col {
+        text-align: center
+    }
+
     .downloadApp-img {
-        width: initial;
+        margin-top: 3%;
+        width: 55%;
+    }
+
+    .downloadApp-p {
+        margin-left: 5%;
     }
 
     .downloadApp-button {
@@ -526,35 +544,38 @@ footer {
     /* Title */
 
     .title-first-col {
-        padding-left: 3%;
+        margin-top: 6%;
     }
 
     .title-img {
-        width: 100%;
-        padding-right: 10%;
-        padding-top: 40%;
+        width: 75%;
+        margin-top: 5%;
     }
 
     /* Form */
 
     .form-div {
+        margin-top: 18%;
         padding-right: 7%;
+    }
+
+    /* MiniCurrencyInformation */
+
+    .miniCurrencyInformation-div {
+        margin-top: 10%;
     }
 
     /* Currency Information */
 
     .currencyInformation-div {
         margin-top: 15%;
+        padding-bottom: 6%;
     }
 
     /* Download App */
 
     .downloadApp-div {
-        margin-top: 12%;
-    }
-
-    .downloadApp-img {
-        scale: 0.8;
+        margin-top: 15%;
     }
 
     .downloadApp-first-col {

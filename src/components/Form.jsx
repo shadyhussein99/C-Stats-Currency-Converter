@@ -2,14 +2,26 @@
 // Form of the currency conversion section  ( user's input )
 
 import React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import MiniForm from "./MiniForm"
+import CurrencyInput from "./CurrencyInput"
 
 function Form(props) {
 
     var [amount, setAmount] = useState("")    // value of user amount input before clicking convert
     var [from, setFrom] = useState("")     // value of user change from input before clicking convert
     var [to, setTo] = useState("")     // value of user change to input before clicking convert
+
+       useEffect(function () {
+           fetch(`https://api.currencybeacon.com/v1/convert?api_key=280d6550ce1839946307c723fbec08a2&from=${props.savedFrom}&to=${props.savedTo}&amount=${props.savedAmount}`)
+               .then(res => res.json())
+               .then(res => {
+                   const { response } = res
+                   props.setResult(response)
+               })
+               .catch(err => console.log(err))
+       }, [props.savedAmount, props.savedFrom, props.savedTo])   
+
 
     function changeAmount(event) {
         setAmount(event.target.value)
@@ -33,8 +45,8 @@ function Form(props) {
             props.setShown(true)
         }
         props.setSavedAmount(amount)
-        props.setSavedFrom(from.toUpperCase())   // toUpperCase() because the API can read the 3-digit code of the currency in upper case only
-        props.setSavedTo(to.toUpperCase())
+        props.setSavedFrom(from)
+        props.setSavedTo(to)
 
     }
 
@@ -45,7 +57,6 @@ function Form(props) {
                     type="text"
                     label="Amount"
                     placeholder=""
-                    list=""
                     change={changeAmount}
                     value={amount}
                     divClass="miniform-in-form"
@@ -54,30 +65,20 @@ function Form(props) {
                 />
                 {props.validNo && <p className="invalid-paragraph">please enter a valid number</p>}</div>
             <div className="col col-lg-3 col-sm-3">
-                <MiniForm
-                    type="text"
+                <CurrencyInput
                     label="From"
-                    placeholder="3-digit currency code"
-                    list="datalistOptions"
-                    change={changeFrom}
-                    value={from}
-                    divClass="miniform-in-form"
+                    handleChange={changeFrom}
                     labelClass="labelClass-in-form"
-                    inputClass="form-control"
+                    divClass="miniform-in-form"
                 />
             </div>
             <div className="col col-lg-1 col-sm-1 form-third-col"><i className="fa-solid fa-arrow-right"></i></div>
             <div className="col col-lg-3 col-sm-3">
-                <MiniForm
-                    type="text"
+                <CurrencyInput
                     label="To"
-                    placeholder="3-digit currency code"
-                    list="datalistOptions"
-                    change={changeTo}
-                    value={to}
-                    divClass="miniform-in-form"
+                    handleChange={changeTo}
                     labelClass="labelClass-in-form"
-                    inputClass="form-control"
+                    divClass="miniform-in-form"
                 />
                 <button onClick={handleClick} className="btn btn-outline-primary form-button">Convert</button></div>
         </div>

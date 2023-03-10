@@ -7,7 +7,7 @@ import MiniCurrencyInformation from "./MiniCurrencyInformation";
 function CurrencyInformation() {
     return <div className="container currencyInformation-div">
         <div class="row currencyInformation-row">
-            <div class="col col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/dollar.PNG"
                     heading="USD - US Dollar"
@@ -16,7 +16,7 @@ function CurrencyInformation() {
                     refrence="/dollar-currency"
                 />
             </div>
-            <div class="col col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/euro.PNG"
                     heading="EUR - Euro"
@@ -27,7 +27,7 @@ function CurrencyInformation() {
             </div>
         </div>
         <div class="row currencyInformation-row">
-            <div class="col col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/yen.PNG"
                     heading="JPY - JP Yen"
@@ -36,7 +36,7 @@ function CurrencyInformation() {
                     refrence="/yen-currency"
                 />
             </div>
-            <div class="col col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/british.PNG"
                     heading="GBP - GB Pound"
