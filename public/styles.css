@@ -456,6 +456,17 @@ footer {
     padding-bottom: 3%;
 }
 
+@media (max-width: 1525px) {
+
+    /*  Currency file */
+
+    .currency-second-h1 {
+        display: block;
+        margin-top: 0;
+        padding-left: 0;
+    }
+}
+
 @media (max-width: 1280px) {
 
     /* Title */
