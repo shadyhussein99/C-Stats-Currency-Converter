@@ -18,7 +18,7 @@ function Title() {
                 <h3 className="title-h3">{day} : {month} : {year}</h3>
             </div>
             <div className="col-lg-6 col-sm-12 title-second-col">
-                <img className="title-img" src="./public/pics/currencyExchange.PNG" alt="currency-pic" />
+                <img className="title-img" src={"./public/pics/currencyExchange.PNG"} alt="currency-pic" />
             </div>
         </div>
     </div>

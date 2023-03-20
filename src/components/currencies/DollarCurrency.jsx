@@ -8,7 +8,7 @@ import Currency from "./Currency";
 function DollarCurrency() {
     return <Currency
         currencyHeading="US Dollar Currency"
-        headingImage="..\public\pics\dollar.PNG"
+        headingImage={"../public/pics/dollar.PNG"}
         currencyCode="USD"
         description="The United States dollar is one of the most widely utilized currencies around the globe, both as an official currency and for international trade outside US borders. The dollar is divided into 100 units called pennies or cents."
         firstEconomy="The United States of America has a mixed capitalist economy, which is fueled by abundant natural resources, a well-developed infrastructure, and high productivity."

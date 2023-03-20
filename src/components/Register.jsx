@@ -84,7 +84,7 @@ function Register() {
     return <div>
         <Navbar />
         <div className="container register-div">
-            <img className="register-img" src="../public/pics/currency.PNG" alt="currency-pic" />
+            <img className="register-img" src={"../public/pics/currency.PNG"} alt="currency-pic" />
             <h3 className="register-h3">Create your account</h3>
 
             <MiniForm
