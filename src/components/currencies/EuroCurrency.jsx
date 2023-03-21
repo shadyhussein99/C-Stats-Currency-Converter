@@ -7,7 +7,7 @@ import Currency from "./Currency";
 function EuroCurrency() {
     return <Currency
         currencyHeading="Euro Currency"
-        headingImage={"../public/pics/euro.PNG"}
+        headingImage="/pics/euro.PNG"
         currencyCode="EUR"
         description="The official currency used in the Eurozone is the euro (EUR). The eurozone consists of the 17 states of the European Union: Austria, Cyprus, Estonia, Portugal, Belgium, Germany, Malta, Portugal, Netherlands, Italy, Ireland, Greece, Luxemburg, France, Slovakia, Spain, and Slovenia. The euro is the second-largest currency that is traded worldwide."
         firstEconomy="The Euro is seen as a macro-economy system. It gives the countries that are part of the eurozone economical stability."
