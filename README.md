@@ -1,5 +1,5 @@
 # C-Stats-Currency-Converter
-Track live change rates of Global currencies ( Get the value of a currency converted from another with the amount you need ) 
+Track live change rates of Global currencies ( Get the value of a currency converted from another with the amount you need ), fetching real live data using RESTful API
 
 # Installation
 To run the chrome extention locally, use the following commands
