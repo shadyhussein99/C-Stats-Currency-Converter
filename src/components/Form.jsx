@@ -13,7 +13,7 @@ function Form(props) {
     var [to, setTo] = useState("")     // value of user change to input before clicking convert
 
        useEffect(function () {
-           fetch(`https://api.currencybeacon.com/v1/convert?api_key=${import.meta.env.VITE_REACT_API_KEY}&from=${props.savedFrom}&to=${props.savedTo}&amount=${props.savedAmount}`)
+           fetch(`https://api.currencybeacon.com/v1/convert?api_key=280d6550ce1839946307c723fbec08a2&from=${props.savedFrom}&to=${props.savedTo}&amount=${props.savedAmount}`)
                .then((res) => res.json())
                .then((res) => {
                    const { response } = res
