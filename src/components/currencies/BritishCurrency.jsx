@@ -8,7 +8,7 @@ import Currency from "./Currency";
 function BritishCurrency() {
     return <Currency
         currencyHeading="Great British Pound Currency"
-        headingImage="..\public\pics\british.PNG"
+        headingImage="/pics/british.PNG"
         currencyCode="GBP"
         description="The pound sterling, or GBP, is the official currency of the United Kingdom. The pound is also used in Jersey, Guernsey, Gibraltar, the Isle of Man, South Georgia and the South Sandwich Islands, the British Antarctic Territory, and Tristan da Cunha. The GBP is subdivided into 100 pence. The symbol for the British pound is £. The pound sterling is the oldest currency in continuous use and is the fourth most traded currency in the foreign exchange market, after the US dollar, euro and Japanese yen."
         firstEconomy="A highly developed social market, the economy of the United Kingdom comprises England, Scotland, Wales and Northern Ireland. The main industries range from construction and manufacturing to financial and business services as well as tourism."

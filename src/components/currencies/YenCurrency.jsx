@@ -7,7 +7,7 @@ import Currency from "./Currency";
 function YenCurrency() {
     return <Currency
         currencyHeading="Japanese Yen Currency"
-        headingImage="..\public\pics\yen.PNG"
+        headingImage="/pics/yen.PNG"
         currencyCode=" JPY"
         description="Introduced in 1871, the Japanese yen (Japanese: 円), or JPY, is the official currency of Japan. The symbol of the yen is ¥, along with JP¥, which is sometimes used to separate the Japanese yen from the Chinese yuan renminbi, which shares the same symbol."
         firstEconomy="The Japanese currency is the third most traded currency in the world after the United States dollar, (USD), and euro (EUR). JPY also ranks as the fourth reserve currency after the United States dollar, euro and British pound (GBP) globally."
