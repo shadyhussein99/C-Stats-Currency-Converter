@@ -23,7 +23,7 @@ function App() {
   var [shown, setShown] = useState(false)     // Responsible for showing the results only if the user entered a valid amount (number)
 
 
-  return (<div>
+  return (<main>
     <Navbar />
     <Title />
     <Form
@@ -47,7 +47,7 @@ function App() {
     <CurrencyInformation />
     <DownloadApp />
     <Footer />
-  </div>
+  </main>
   )
 }
 

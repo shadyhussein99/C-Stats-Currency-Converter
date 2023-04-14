@@ -12,15 +12,15 @@ function Form(props) {
     var [from, setFrom] = useState("")     // value of user change from input before clicking convert
     var [to, setTo] = useState("")     // value of user change to input before clicking convert
 
-       useEffect(function () {
-           fetch(`https://api.currencybeacon.com/v1/convert?api_key=280d6550ce1839946307c723fbec08a2&from=${props.savedFrom}&to=${props.savedTo}&amount=${props.savedAmount}`)
-               .then(res => res.json())
-               .then(res => {
-                   const { response } = res
-                   props.setResult(response)
-               })
-               .catch(err => console.log(err))
-       }, [props.savedAmount, props.savedFrom, props.savedTo])   
+    useEffect(function () {
+        fetch(`https://api.currencybeacon.com/v1/convert?api_key=280d6550ce1839946307c723fbec08a2&from=${props.savedFrom}&to=${props.savedTo}&amount=${props.savedAmount}`)
+            .then(res => res.json())
+            .then(res => {
+                const { response } = res
+                props.setResult(response)
+            })
+            .catch(err => console.log(err))
+    }, [props.savedAmount, props.savedFrom, props.savedTo])
 
 
     function changeAmount(event) {
@@ -50,9 +50,10 @@ function Form(props) {
 
     }
 
-    return <div className="form-div">
-        <div className="row">
-            <div className="col col-lg-3 col-sm-3">
+    return <section className="form-div">
+        <section className="row">
+
+            <section className="col col-lg-3 col-sm-3">
                 <MiniForm
                     type="text"
                     label="Amount"
@@ -63,28 +64,34 @@ function Form(props) {
                     labelClass="labelClass-in-form"
                     inputClass="form-control"
                 />
-                {props.validNo && <p className="invalid-paragraph">please enter a valid number</p>}</div>
-            <div className="col col-lg-3 col-sm-3">
+                {props.validNo && <p className="invalid-paragraph">please enter a valid number</p>}
+            </section>
+
+            <section className="col col-lg-3 col-sm-3">
                 <CurrencyInput
                     label="From"
                     handleChange={changeFrom}
                     labelClass="labelClass-in-form"
                     divClass="miniform-in-form"
                 />
-            </div>
-            <div className="col col-lg-1 col-sm-1 form-third-col"><i className="fa-solid fa-arrow-right"></i></div>
-            <div className="col col-lg-3 col-sm-3">
+            </section>
+
+            <section className="col col-lg-1 col-sm-1 form-third-col">
+                <i className="fa-solid fa-arrow-right"></i>
+            </section>
+
+            <section className="col col-lg-3 col-sm-3">
                 <CurrencyInput
                     label="To"
                     handleChange={changeTo}
                     labelClass="labelClass-in-form"
                     divClass="miniform-in-form"
                 />
-                <button onClick={handleClick} className="btn btn-outline-primary form-button">Convert</button></div>
-        </div>
+                <button onClick={handleClick} className="btn btn-outline-primary form-button">Convert</button>
+            </section>
 
-
-    </div>
+        </section>
+    </section>
 }
 
 export default Form

@@ -9,19 +9,19 @@ function Title() {
     var month = (new Date().getMonth()) + 1
     var year = new Date().getFullYear()
 
-    return <div className="title-div">
-        <div className="row">
-            <div className="col-lg-6 col-sm-12 title-first-col">
+    return <header className="title-div">
+        <section className="row">
+            <section className="col-lg-6 col-sm-12 title-first-col">
                 <h1 className="title-h1">C-STATS Currency Converter</h1>
                 <p className="title-p">Check currency exchange rates</p>
                 <h2 className="title-h2">Live stats according to</h2>
                 <h3 className="title-h3">{day} : {month} : {year}</h3>
-            </div>
-            <div className="col-lg-6 col-sm-12 title-second-col">
+            </section>
+            <section className="col-lg-6 col-sm-12 title-second-col">
                 <img className="title-img" src="./public/pics/currencyExchange.PNG" alt="currency-pic" />
-            </div>
-        </div>
-    </div>
+            </section>
+        </section>
+    </header>
 }
 
 export default Title

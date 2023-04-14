@@ -6,9 +6,9 @@ import Navbar from "../Navbar"
 import Footer from "../Footer"
 
 function Currency(props) {
-    return <div>
+    return <section>
         <Navbar />
-        <div className="container currency-div">
+        <article className="container currency-div">
             <h1 className="currency-first-h1">{props.currencyHeading}</h1>
             <h1 className={props.class}><img src={props.headingImage} alt="currency-img" /> {props.currencyCode}</h1>
             <h3 className="currency-h3">Description</h3>
@@ -27,9 +27,9 @@ function Currency(props) {
                 <li className="currency-li">{props.thirdHistory}</li>
                 <li className="currency-li">{props.fourthHistory}</li>
             </ul>
-        </div>
+        </article>
         <Footer />
-    </div>
+    </section>
 }
 
 export default Currency

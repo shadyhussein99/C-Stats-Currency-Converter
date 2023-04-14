@@ -5,9 +5,9 @@ import React from "react"
 import MiniCurrencyInformation from "./MiniCurrencyInformation";
 
 function CurrencyInformation() {
-    return <div className="container currencyInformation-div">
-        <div class="row currencyInformation-row">
-            <div class="col-lg-6 col-sm-12">
+    return <section className="container currencyInformation-div">
+        <section class="row currencyInformation-row">
+            <article class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/dollar.PNG"
                     heading="USD - US Dollar"
@@ -15,8 +15,8 @@ function CurrencyInformation() {
                     currencyName="US Dollar"
                     refrence="/dollar-currency"
                 />
-            </div>
-            <div class="col-lg-6 col-sm-12">
+            </article>
+            <article class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/euro.PNG"
                     heading="EUR - Euro"
@@ -24,10 +24,10 @@ function CurrencyInformation() {
                     currencyName="Euro"
                     refrence="/euro-currency"
                 />
-            </div>
-        </div>
-        <div class="row currencyInformation-row">
-            <div class="col-lg-6 col-sm-12">
+            </article>
+        </section>
+        <section class="row currencyInformation-row">
+            <article class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/yen.PNG"
                     heading="JPY - JP Yen"
@@ -35,8 +35,8 @@ function CurrencyInformation() {
                     currencyName="JP Yen"
                     refrence="/yen-currency"
                 />
-            </div>
-            <div class="col-lg-6 col-sm-12">
+            </article>
+            <article class="col-lg-6 col-sm-12">
                 <MiniCurrencyInformation
                     headingImage="../public/pics/british.PNG"
                     heading="GBP - GB Pound"
@@ -44,13 +44,13 @@ function CurrencyInformation() {
                     currencyName="GB Pound"
                     refrence="/british-currency"
                 />
-            </div>
-        </div>
+            </article>
+        </section>
 
 
 
 
-    </div>
+    </section>
 }
 
 export default CurrencyInformation

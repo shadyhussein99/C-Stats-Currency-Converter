@@ -4,10 +4,12 @@
 import React from "react";
 
 function CurrencyInput(props) {
-    return <div className={props.divClass}>
+    return <section className={props.divClass}>
+
         <label className={props.labelClass}><h5>{props.label}</h5></label>
 
-        <div className="input-group mb-3">
+        <section className="input-group mb-3">
+
             <select onChange={props.handleChange} className="custom-select form-control" id="inputGroupSelect02">
                 <option selected>3-digit currency code...</option>
                 <option>USD</option>
@@ -31,8 +33,9 @@ function CurrencyInput(props) {
                 <option>YER</option>
                 <option>LYD</option>
             </select>
-        </div>
-    </div>
+            
+        </section>
+    </section>
 }
 
 export default CurrencyInput

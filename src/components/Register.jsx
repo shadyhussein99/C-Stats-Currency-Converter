@@ -81,9 +81,10 @@ function Register() {
         }
     }, [validEmail, createPassword, confirmPassword, emailChange, createPasswordChange, confirmPasswordChange])
 
-    return <div>
+    return <section>
         <Navbar />
-        <div className="container register-div">
+        <section className="container register-div">
+
             <img className="register-img" src="../public/pics/currency.PNG" alt="currency-pic" />
             <h3 className="register-h3">Create your account</h3>
 
@@ -126,10 +127,12 @@ function Register() {
 
             {!confirmPassword && <p className="register-invalid">Please match both passwords</p>}
 
-            {disableButton ? <Link to="/"><button type="button" class="register-button btn btn-primary">Register Now</button></Link> : <Link><button type="button" class="register-button btn btn-primary" disabled>Register Now</button></Link>}
-        </div>
+            {disableButton ? <Link to="/"><button type="button" class="register-button btn btn-primary">Register Now</button></Link> :
+                <Link><button type="button" class="register-button btn btn-primary" disabled>Register Now</button></Link>}
+                
+        </section>
         <Footer />
-    </div>
+    </section>
 }
 
 export default Register

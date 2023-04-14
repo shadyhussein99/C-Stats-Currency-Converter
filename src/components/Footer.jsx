@@ -4,7 +4,9 @@
 import React from "react"
 
 function Footer() {
+
   const year = new Date().getFullYear();
+  
   return <footer>
     <i type="button" className="fa-brands fa-facebook footer-icons"></i>
     <i type="button" className="fa-brands fa-twitter footer-icons"></i>

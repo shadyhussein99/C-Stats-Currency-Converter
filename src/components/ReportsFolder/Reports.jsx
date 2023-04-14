@@ -7,10 +7,10 @@ import Navbar from "../Navbar"
 import Footer from "../Footer"
 
 function Reports() {
-    return <div>
+    return <section>
         <Navbar />
-        <div className="container reports-h1-div"><h1 className="reports-h1">Currency Reports</h1></div>
-        <div className="reports-div">
+        <header className="container reports-h1-div"><h1 className="reports-h1">Currency Reports</h1></header>
+        <article className="reports-div">
             <h2 className="reports-h2">Latest Currency Watch</h2>
             <MiniReports
                 reportHeading="2 March 2023 | UST yields keep pushing higher. Firm DXY "
@@ -20,9 +20,9 @@ function Reports() {
                 date="2 March 2023"
                 link="https://www.mizuhogroup.com/binaries/content/assets/pdf/emea/what-we-do/insights-and-research/research-centre/daily-currency-watch/dcw-23-03-02.pdf"
             />
-        </div>
+        </article>
         <Footer />
-    </div>
+    </section>
 }
 
 export default Reports
