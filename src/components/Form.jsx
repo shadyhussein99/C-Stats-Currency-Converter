@@ -12,7 +12,7 @@ function Form(props) {
     var [from, setFrom] = useState("")     // value of user change from input before clicking convert
     var [to, setTo] = useState("")     // value of user change to input before clicking convert
 
-<<<<<<< HEAD
+    
     useEffect(function () {
         fetch(`https://api.currencybeacon.com/v1/convert?api_key=280d6550ce1839946307c723fbec08a2&from=${props.savedFrom}&to=${props.savedTo}&amount=${props.savedAmount}`)
             .then(res => res.json())
@@ -22,17 +22,6 @@ function Form(props) {
             })
             .catch(err => console.log(err))
     }, [props.savedAmount, props.savedFrom, props.savedTo])
-=======
-       useEffect(function () {
-           fetch(`https://api.currencybeacon.com/v1/convert?api_key=280d6550ce1839946307c723fbec08a2&from=${props.savedFrom}&to=${props.savedTo}&amount=${props.savedAmount}`)
-               .then((res) => res.json())
-               .then((res) => {
-                   const { response } = res
-                   props.setResult(response)
-               })
-               .catch((err) => console.log(err))
-       }, [props.savedAmount, props.savedFrom, props.savedTo])   
->>>>>>> edf9192b827fa4bc3e8cf865c66131e1bc4e9277
 
 
     function changeAmount(event) {
